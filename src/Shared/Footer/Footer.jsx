@@ -1,7 +1,7 @@
 import { FaPhoneAlt, FaFacebook, FaInstagramSquare, FaYoutube } from 'react-icons/fa';
 import { MdEmail, MdLocationPin } from 'react-icons/md';
 
-import logo from "../../../public/ZooLand.png"
+import logo from "../../../src/assets/ZooLand.png"
 const Footer = () => {
     return (
         <div className="mt-auto">

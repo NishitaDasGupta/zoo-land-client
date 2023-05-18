@@ -1,13 +1,42 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import login from "../assets/login.png"
 import { FaGoogle } from "react-icons/fa";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 const Login = () => {
+  const { signin, googleSignIn } = useContext(AuthContext);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
   const handleLogin = event => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    signin(email, password)
+      .then((result) => {
+        const user = result.user;
+        setError(null);
+        form.reset();
+        navigate('/');
+        console.log(user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  }
+
+  const handleGoogle = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        setError(null);
+        navigate('/');
+        console.log(user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   }
   return (
     <div>
@@ -37,12 +66,15 @@ const Login = () => {
                       <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                   </div>
+                  {
+                    error && <p className="text-red-600">{error}</p>
+                  }
                   <div className="form-control mt-6">
                     <button className="btn bg-orange-400 hover:bg-orange-600">Login</button>
                   </div>
                   <div className="divider">Or Sign in With</div>
                   <div className="form-control mt-6">
-                    <button className="btn bg-orange-400 hover:bg-orange-600"><span className="text-2xl pr-3"><FaGoogle /></span> Google</button>
+                    <button onClick={handleGoogle} className="btn bg-orange-400 hover:bg-orange-600"><span className="text-2xl pr-3"><FaGoogle /></span> Google</button>
                   </div>
                 </div>
                 <div className="text-center">
