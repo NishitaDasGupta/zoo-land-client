@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import login from "../assets/login.png"
+import { FaGoogle } from "react-icons/fa";
 const Login = () => {
   const handleLogin = event => {
     event.preventDefault();
@@ -10,14 +11,14 @@ const Login = () => {
   }
   return (
     <div>
+      <h2 className="text-4xl font-bold text-center py-5">Please Login!</h2>
       <div className="hero min-h-screen ">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
+        <div className="hero-content w-full lg:flex-row-reverse flex-col">
+          <div className="w-1/2">
             <img src={login} alt="" />
           </div>
-          <div>
-            <h2 className="text-4xl font-bold text-center">Please Login!</h2>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
+          <div className="w-1/2 lg:w-1/4">
+            <div className="card  w-full  shadow-2xl ">
 
               <form onSubmit={handleLogin}>
                 <div className="card-body">
@@ -25,7 +26,7 @@ const Login = () => {
                     <label className="label">
                       <span className="label-text">Email</span>
                     </label>
-                    <input type="email"  name="email" placeholder="email" className="input input-bordered" />
+                    <input type="email" name="email" placeholder="email" className="input input-bordered" />
                   </div>
                   <div className="form-control">
                     <label className="label">
@@ -38,6 +39,10 @@ const Login = () => {
                   </div>
                   <div className="form-control mt-6">
                     <button className="btn bg-orange-400 hover:bg-orange-600">Login</button>
+                  </div>
+                  <div className="divider">Or Sign in With</div>
+                  <div className="form-control mt-6">
+                    <button className="btn bg-orange-400 hover:bg-orange-600"><span className="text-2xl pr-3"><FaGoogle /></span> Google</button>
                   </div>
                 </div>
                 <div className="text-center">
