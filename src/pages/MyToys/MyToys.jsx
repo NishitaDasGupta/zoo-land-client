@@ -24,7 +24,7 @@ const MyToys = () => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Delete!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
                 fetch(`http://localhost:5000/alltoy/${_id}`, {
                     method: "DELETE"
@@ -36,18 +36,17 @@ const MyToys = () => {
                                 'Deleted!',
                                 'Your file has been deleted.',
                                 'success'
-                              )
-                            const remaining = myToy.filter(value => value._id !== _id );
+                            )
+                            const remaining = myToy.filter(value => value._id !== _id);
                             setMyToy(remaining);
                         }
                     })
-
-
-             
             }
-          })
-     
+        })
     }
+
+
+   
     return (
         <div>
             <h2 className="text-center text-3xl font-bold text-orange-600 my-3">Your Toy Items</h2>
@@ -70,6 +69,7 @@ const MyToys = () => {
                                 key={toy._id}
                                 toy={toy}
                                 handleDelete={handleDelete}
+                                
                                 index={index}></MyToysTable>)
                         }
 

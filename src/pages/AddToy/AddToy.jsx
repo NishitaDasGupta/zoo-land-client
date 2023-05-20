@@ -49,7 +49,7 @@ const AddToy = () => {
                             <span className="label-text">Seller Email</span>
                         </label>
                         <input type="email" name="sellerEmail" placeholder="Your email"
-                            defaultValue={user.email}
+                            value={user.email}
                             className="input input-bordered" />
                     </div>
                     <div className="form-control">
@@ -58,7 +58,7 @@ const AddToy = () => {
                         </label>
                         <input type="text" name="seller"
                             placeholder="Your name"
-                            defaultValue={user.displayName}
+                            value={user.displayName}
                             className="input input-bordered" />
                     </div>
                 </div>
