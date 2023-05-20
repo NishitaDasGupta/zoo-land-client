@@ -1,7 +1,8 @@
 import { Rating } from "@smastrom/react-rating";
 import '@smastrom/react-rating/style.css'
-import { useLoaderData } from "react-router-dom";
-
+import { Link, useLoaderData } from "react-router-dom";
+import { AiOutlineRight } from "react-icons/ai";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 const SingleToy = () => {
     const toy = useLoaderData();
     console.log("Single page :", toy);
@@ -9,6 +10,12 @@ const SingleToy = () => {
     } = toy;
     return (
         <div className="mt-14">
+           
+            <div className="flex items-center mb-3">
+              <Link to="/allToys" title="Back" className="text-xl mr-3" >
+              <BsFillArrowLeftCircleFill/></Link >
+               {subcategory} <AiOutlineRight/> {animal} <AiOutlineRight/> {toyName}</div>
+            
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={picture} alt="Album" /></figure>
                 <div className="card-body ">

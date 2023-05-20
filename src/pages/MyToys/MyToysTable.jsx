@@ -1,22 +1,36 @@
+import { FaEdit } from "react-icons/fa";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { BiDetail } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
-const MyToysTable = ({toy,index}) => {
-   
-        const { _id, availableQuantity, price, seller, subcategory, toyName } = toy;
-        return (
-            <tr>
-                <th>{index+1}</th>
-                <td>{seller}</td>
-                <td>{toyName}</td>
-                <td>{subcategory}</td>
-                <td>${price}</td>
-                <td className="text-center">{availableQuantity}</td>
-                <td>
-                    
-                    <button  className="btn bg-orange-400 hover:bg-orange-600">Details</button>
-                   
-                </td>
-            </tr>
+const MyToysTable = ({ toy, index }) => {
+
+    const { _id, animal, availableQuantity, price, subcategory, toyName } = toy;
+    return (
+        <tr>
+            <th>{index + 1}</th>
+            <td>{toyName}</td>
+            <td>{animal}</td>
+            <td>{subcategory}</td>
+            <td>${price}</td>
+            <td className="text-center">Total: {availableQuantity}</td>
+            <td>
+                <div className="flex items-center justify-center">
+                    <p title="Edit">
+                        <button className="btn btn-outline border-0 hover:bg-orange-400"><FaEdit /></button>
+                    </p>
+                    <p title="Delete">
+                        <button className="btn btn-outline border-0 hover:bg-orange-400"><RiDeleteBin6Line /></button></p>
+                    <Link to={`/alltoy/${_id}`}>
+                        <p title="View Details"> <button className="btn btn-outline border-0 hover:bg-orange-400"><BiDetail /></button></p>
+
+                    </Link>
+
+
+                </div>
+            </td>
+        </tr>
     );
 };
 

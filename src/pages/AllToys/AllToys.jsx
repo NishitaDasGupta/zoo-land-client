@@ -9,7 +9,9 @@ const AllToys = () => {
     .then(data => setAllToys(data))
   },[])
     return (
-      <div className="overflow-x-auto mt-5">
+     <div>
+      <h2 className="text-center text-3xl font-bold text-orange-600 my-3">Toy Items</h2>
+       <div className="overflow-x-auto mt-5">
       <table className="table table-compact w-full">
         <thead>
           <tr>
@@ -38,6 +40,7 @@ const AllToys = () => {
        
       </table>
     </div>
+     </div>
     );
 };
 

@@ -16,16 +16,18 @@ const MyToys = () => {
             })
     }, [])
     return (
+  <div>
+          <h2 className="text-center text-3xl font-bold text-orange-600 my-3">Your Toy Items</h2>
         <div className="overflow-x-auto mt-5">
         <table className="table table-compact w-full">
           <thead>
             <tr>
               <th></th> 
-              <th>Seller Name</th> 
               <th>Toy Name</th> 
+              <th>Animal Type</th> 
               <th>Sub-category</th> 
               <th>Price</th> 
-              <th>Available Quantity</th> 
+              <th className="text-center">Available Quantity</th> 
               <th></th>
             </tr>
           </thead> 
@@ -42,6 +44,7 @@ const MyToys = () => {
          
         </table>
       </div>
+  </div>
     );
 };
 
