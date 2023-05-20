@@ -4,7 +4,7 @@ import { BiDetail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 
-const MyToysTable = ({ toy, index }) => {
+const MyToysTable = ({ toy, index, handleDelete }) => {
 
     const { _id, animal, availableQuantity, price, subcategory, toyName } = toy;
     return (
@@ -21,7 +21,7 @@ const MyToysTable = ({ toy, index }) => {
                         <button className="btn btn-outline border-0 hover:bg-orange-400"><FaEdit /></button>
                     </p>
                     <p title="Delete">
-                        <button className="btn btn-outline border-0 hover:bg-orange-400"><RiDeleteBin6Line /></button></p>
+                        <button onClick={()=> {handleDelete(_id)}} className="btn btn-outline border-0 hover:bg-orange-400"><RiDeleteBin6Line /></button></p>
                     <Link to={`/alltoy/${_id}`}>
                         <p title="View Details"> <button className="btn btn-outline border-0 hover:bg-orange-400"><BiDetail /></button></p>
 
