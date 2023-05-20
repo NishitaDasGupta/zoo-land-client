@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import AllToysTable from "./AllToysTable";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
+  useTitle("All Toys");
   useEffect(()=> {
     fetch("http://localhost:5000/allToys")
     .then(res => res.json())
@@ -26,9 +28,7 @@ const AllToys = () => {
         </thead> 
         <tbody>
           {
-
-            // allToys.slice(0,20).map((toy,index) =><AllToysTable
-            allToys.map((toy,index) =><AllToysTable
+            allToys.slice(0,20).map((toy,index) =><AllToysTable
             key={toy._id}
             toy={toy}
             index={index}

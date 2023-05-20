@@ -3,9 +3,10 @@ import '@smastrom/react-rating/style.css'
 import { Link, useLoaderData } from "react-router-dom";
 import { AiOutlineRight } from "react-icons/ai";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import useTitle from "../../hooks/useTitle";
 const SingleToy = () => {
     const toy = useLoaderData();
-    console.log("Single page :", toy);
+    useTitle("Toy Details");
     const { seller, animal, availableQuantity, price, sellerEmail, subcategory, toyName, picture, detailDescription, rating
     } = toy;
     return (
