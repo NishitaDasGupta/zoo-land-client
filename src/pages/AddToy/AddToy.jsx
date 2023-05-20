@@ -46,7 +46,7 @@ const AddToy = () => {
                 <div className="grid lg:grid-cols-2 gap-4">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Seller Email</span>
+                            <span className="label-text font-bold">Seller Email</span>
                         </label>
                         <input type="email" name="sellerEmail" placeholder="Your email"
                             value={user.email}
@@ -54,7 +54,7 @@ const AddToy = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Seller Name</span>
+                            <span className="label-text font-bold">Seller Name</span>
                         </label>
                         <input type="text" name="seller"
                             placeholder="Your name"
@@ -64,20 +64,20 @@ const AddToy = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Photo of Toy</span>
+                        <span className="label-text font-bold">Photo of Toy</span>
                     </label>
                     <input type="text" name="picture" placeholder="Photo URL of Toy" className="input input-bordered" />
                 </div>
                 <div className="grid lg:grid-cols-2 gap-4">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Toy name</span>
+                            <span className="label-text font-bold">Toy name</span>
                         </label>
                         <input type="text" name="toyName" placeholder="Toy name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text font-bold">Price</span>
                         </label>
                         <input type="text" name="price" placeholder="Price" className="input input-bordered" />
                     </div>
@@ -86,13 +86,13 @@ const AddToy = () => {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Animal Type</span>
+                            <span className="label-text font-bold">Animal Type</span>
                         </label>
                         <input type="text" name="animal" placeholder="Animal Type of toy" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Sub-Category</span>
+                            <span className="label-text font-bold">Sub-Category</span>
                         </label>
                         <input type="text" name="subcategory" placeholder="Sub-Category of toy" className="input input-bordered" />
                     </div>
@@ -100,20 +100,20 @@ const AddToy = () => {
                 <div className="grid lg:grid-cols-2 gap-4">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Quantity</span>
+                            <span className="label-text font-bold">Quantity</span>
                         </label>
                         <input type="text" name="availableQuantity" placeholder="Availabel quantity" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Rating</span>
+                            <span className="label-text font-bold">Rating</span>
                         </label>
                         <input type="text" name="rating" placeholder="Rating" className="input input-bordered" />
                     </div>
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Description</span>
+                        <span className="label-text font-bold">Description</span>
                     </label>
                     <input type="text" name="detailDescription" placeholder="Description of Toy" className="input input-bordered" />
                 </div>

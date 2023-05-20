@@ -3,11 +3,9 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiDetail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-
-
 const MyToysTable = ({ toy, index, handleDelete }) => {
-
-    const { _id, animal, availableQuantity, price, subcategory, toyName } = toy;
+    
+  const { _id, animal, availableQuantity, price, subcategory, toyName } = toy;
 
     return (
         <tr>
