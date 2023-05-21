@@ -18,6 +18,7 @@ const ShopCategory = () => {
       .then(data => setsubcategoryValue(data))
   }, [])
   return (
+
     <div className="mx-auto mt-16 text-center">
       <h2 className="text-4xl font-bold text-center mb-5 text-gray-600">Category Oasis: Find Fun</h2>
       <p className="max-w-xl border-l-8 border-r-8 border-orange-500 mx-auto mb-9">Quench your thirst for playtime exploration with our oasis of toy categories. Journey through the vast desert of possibilities and uncover hidden treasures.</p>
@@ -56,7 +57,9 @@ const ShopCategory = () => {
                 </div>
               </TabPanel>
             </Tabs>
-          </div>  </div>  </div> </div>
+          </div>  </div>  </div>
+
+    </div>
   );
 };
 

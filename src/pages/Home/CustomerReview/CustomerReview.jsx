@@ -12,7 +12,7 @@ const CustomerReview = () => {
     }, [])
     return (
         <div className="mx-auto mt-16">
-            <h2 className="text-4xl  text-center border-l-8 border-r-8 border-orange-500 font-bold text-center mb-5 text-orange-600">Hear What Customers Say</h2>
+            <h2 className="text-4xl border-l-8 border-r-8 border-orange-500 font-bold text-center mb-5 text-orange-600">Hear What Customers Say</h2>
             <div className="my-8 w-3/4 mx-auto space-y-5">
 
                 {

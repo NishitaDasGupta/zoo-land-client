@@ -1,8 +1,13 @@
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Banner = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
     return (
-        <div data-aos="fade-up"
-        data-aos-duration="3000" className="hero min-h-screen mb-3" style={{ backgroundImage: `url("https://img.freepik.com/free-vector/wild-animal-nature_1308-24911.jpg?size=626&ext=jpg&ga=GA1.1.1614607020.1683036746&semt=ais")` }}>
+        <div data-aos="zoom-in-up" className="hero min-h-screen mb-3" style={{ backgroundImage: `url("https://img.freepik.com/free-vector/wild-animal-nature_1308-24911.jpg?size=626&ext=jpg&ga=GA1.1.1614607020.1683036746&semt=ais")` }}>
   <div className="hero-overlay bg-opacity-0"></div>
   <div className=" text-neutral-content">
     <div className="max-w-2xl">

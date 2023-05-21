@@ -1,11 +1,18 @@
 import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const SubCategory = ({ value }) => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, [])
     const { _id, price, toyName, picture, rating } = value;
     return (
-        <div className="card w-72 rounded-t-3xl bg-base-100 shadow-2xl">
+        <div data-aos="fade-up"
+        data-aos-duration="2000" className="card w-72 rounded-t-3xl bg-base-100 shadow-2xl">
             <figure className=" px-10 pt-10 mx-auto">
                 <img src={picture} alt="Toys" className="w-28 h-36 rounded-xl" />
             </figure>

@@ -4,6 +4,9 @@ import { FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import useTitle from "../hooks/useTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Login = () => {
   const { signin, googleSignIn } = useContext(AuthContext);
   const [error, setError] = useState(null);
@@ -42,12 +45,18 @@ const Login = () => {
         setError(error.message);
       });
   }
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <div>
       <h2 className="text-4xl font-bold text-center py-5">Please Login!</h2>
       <div className="hero min-h-screen ">
         <div className="hero-content w-full lg:flex-row-reverse flex-col">
-          <div className="w-1/2">
+          <div  data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="w-1/2">
             <img src={login} alt="" />
           </div>
           <div className="w-1/2 lg:w-1/4">

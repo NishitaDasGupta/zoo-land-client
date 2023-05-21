@@ -3,8 +3,9 @@ import { Rating } from "@smastrom/react-rating";
 import '@smastrom/react-rating/style.css'
 const ReviewCard = ({ review }) => {
     const { customerName, email, customerPic, customerReview, rating } = review;
+    
     return (
-        <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <div  tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
             <div className="collapse-title text-xl font-medium">
                <div className="flex items-center ">
                <div className="avatar mr-6">
