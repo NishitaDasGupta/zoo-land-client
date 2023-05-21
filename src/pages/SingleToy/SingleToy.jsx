@@ -10,10 +10,10 @@ const SingleToy = () => {
     const { seller, animal, availableQuantity, price, sellerEmail, subcategory, toyName, picture, detailDescription, rating
     } = toy;
     return (
-        <div className="mt-14">
+        <div className="mt-14 p-5">
            
             <div className="flex items-center mb-3">
-              <Link to="/allToys" title="Back" className="text-xl mr-3" >
+              <Link to="/" title="Back" className="text-xl mr-3" >
               <BsFillArrowLeftCircleFill/></Link >
                {subcategory} <AiOutlineRight/> {animal} <AiOutlineRight/> {toyName}</div>
             
@@ -25,7 +25,7 @@ const SingleToy = () => {
                     <p className="flex-grow-0">Type: <span className="text-orange-600">{animal}</span> | <span className="text-orange-600">{subcategory}</span>  </p>
                     <div className="divider"></div>
                     <h3 className="text-5xl font-semibold text-orange-600">$ {price}</h3>
-                    <p className="my-8 text-orange-800 text-lg flex-grow-0">Quantity: <span className=" font-medium ps-5 text-orange-600">{availableQuantity}</span></p>
+                    <p className="my-8 text-orange-800 text-lg flex-grow-0">Quantity: <span className=" font-medium ps-1 text-orange-600">{availableQuantity}</span></p>
                     <div className="card-actions ">
                         <button className="btn w-1/4 bg-orange-300 hover:bg-orange-600">Buy Now</button>
                         <button className="btn w-1/4 bg-orange-800  hover:bg-orange-600">Add To Cart</button>

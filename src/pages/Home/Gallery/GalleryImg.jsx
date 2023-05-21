@@ -3,8 +3,8 @@
 const GalleryImg = ({pic}) => {
     const {picture} = pic;
     return (
-        <div className="mx-auto">
-            <img className="p-2 hover:scale-125 rounded-lg" src={picture} />
+        <div className="border-l-2 border-orange-300">
+            <img className="p-2 hover:scale-125 rounded-lg mx-auto" src={picture} />
         </div>
     );
 };
