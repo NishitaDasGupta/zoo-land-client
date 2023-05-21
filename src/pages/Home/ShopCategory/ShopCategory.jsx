@@ -33,7 +33,7 @@ const ShopCategory = () => {
               </TabList>
 
               <TabPanel>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 p-3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-3'>
                   {
                     (subcategoryValue.filter(toy => toy.subcategory === "Plush Toys")).map(value => <SubCategory key={value._id}
                       value={value}></SubCategory>)
@@ -41,7 +41,7 @@ const ShopCategory = () => {
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 p-3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-3'>
                   {
                     (subcategoryValue.filter(toy => toy.subcategory === "Water Toys")).map(value => <SubCategory key={value._id}
                       value={value}></SubCategory>)
@@ -49,7 +49,7 @@ const ShopCategory = () => {
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 p-3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-3'>
                   {
                     (subcategoryValue.filter(toy => toy.subcategory === "Action Toys")).map(value => <SubCategory key={value._id}
                       value={value}></SubCategory>)

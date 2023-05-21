@@ -3,7 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import MyToysTable from "./MyToysTable";
 import Swal from "sweetalert2";
 import useTitle from "../../hooks/useTitle";
-
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -50,9 +50,9 @@ const MyToys = () => {
 
     const handlePrice = value => {
         console.log(value);
-        fetch(`https://zoo-land-server-sigma.vercel.app/allToys?sort=${value}`)
+        fetch(`http://localhost:5000/alltoys?sellerEmail=${user.email}&sort=${value}`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setMyToy(data))
     }
 
 
@@ -69,7 +69,8 @@ const MyToys = () => {
                         <h2 className="text-center text-3xl font-bold text-orange-600 my-3">Your Toy Items</h2>
                         <div>
                             <div className="dropdown dropdown-hover">
-                                <label tabIndex={0} className="bg-orange-400 hover:bg-orange-600 btn m-1">Price (Asc/Desc)</label>
+                                <label tabIndex={0} className="bg-orange-400 hover:bg-orange-600 btn m-1">Price  <div className="text-2xl font-bold">
+                                <RiArrowDropDownLine/></div></label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li className="hover:bg-orange-100"><button onClick={() => { handlePrice(1) }}>Ascending Price</button></li>
                                     <li className="hover:bg-orange-100"><button onClick={() => { handlePrice(-1) }}>Descending Price</button></li>
