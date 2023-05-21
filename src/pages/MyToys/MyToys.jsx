@@ -50,7 +50,7 @@ const MyToys = () => {
 
     const handlePrice = value => {
         console.log(value);
-        fetch(`http://localhost:5000/alltoys?sellerEmail=${user.email}&sort=${value}`)
+        fetch(`https://zoo-land-server-sigma.vercel.app/alltoys?sellerEmail=${user.email}&sort=${value}`)
             .then(res => res.json())
             .then(data => setMyToy(data))
     }
