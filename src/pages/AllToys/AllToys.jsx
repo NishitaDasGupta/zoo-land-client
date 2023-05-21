@@ -7,7 +7,7 @@ const AllToys = () => {
   const [query, setQuery] = useState('');
   useTitle("All Toys");
   useEffect(() => {
-    fetch("http://localhost:5000/allToys")
+    fetch("https://zoo-land-server-sigma.vercel.app/allToys")
       .then(res => res.json())
       .then(data => setAllToys(data))
   }, [])
@@ -40,7 +40,7 @@ const AllToys = () => {
           </thead>
           <tbody>
             {
-              allToys.slice(0, 20).filter(toy => toy.toyName.toLowerCase().includes(query)).map((toy, index) => <AllToysTable
+              allToys.filter(toy => toy.toyName.toLowerCase().includes(query)).map((toy, index) => <AllToysTable
                 key={toy._id}
                 toy={toy}
                 index={index}

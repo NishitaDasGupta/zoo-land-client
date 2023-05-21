@@ -1,3 +1,4 @@
+
 import useTitle from "../../../hooks/useTitle";
 import Banner from "../Banner/Banner";
 import CustomerReview from "../CustomerReview/CustomerReview";
@@ -15,6 +16,7 @@ const Home = () => {
             <ShopCategory></ShopCategory>
             <CustomerReview></CustomerReview>
             <Overall></Overall>
+         
          </div>
     );
 };

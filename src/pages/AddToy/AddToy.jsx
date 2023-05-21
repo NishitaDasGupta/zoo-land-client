@@ -23,7 +23,7 @@ const AddToy = () => {
         const toy = {
             sellerEmail, seller, picture, toyName, price, animal, subcategory, availableQuantity, rating, detailDescription,
         }
-        fetch('http://localhost:5000/allToys', {
+        fetch('https://zoo-land-server-sigma.vercel.app/allToys', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -38,6 +38,7 @@ const AddToy = () => {
                     Swal.fire(
                         'Successfully Added!',
                     )
+                    form.reset();
                 }
             })
     }

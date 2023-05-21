@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: "/alltoy/:id",
                 element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/alltoy/${params.id}`)
+                loader: ({params})=> fetch(`https://zoo-land-server-sigma.vercel.app/alltoy/${params.id}`)
             },
             {
                 path: "blogs",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: "update/:id",
                 element: <PrivateRoute> <Update></Update></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/alltoy/${params.id}`)
+                loader: ({params})=> fetch(`https://zoo-land-server-sigma.vercel.app/alltoy/${params.id}`)
                
             },
             {

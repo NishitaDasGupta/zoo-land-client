@@ -4,7 +4,7 @@ import ReviewCard from "./ReviewCard";
 const CustomerReview = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/customer')
+        fetch('https://zoo-land-server-sigma.vercel.app/customer')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

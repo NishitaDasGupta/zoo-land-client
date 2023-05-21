@@ -7,13 +7,13 @@ const ShopCategory = () => {
   const [subcategoryValue, setsubcategoryValue] = useState([]);
   // const handleTab = (value) => {
   //   console.log(value);
-  //   fetch(`http://localhost:5000/alltoys?subcategory=${value}`)
+  //   fetch(`https://zoo-land-server-sigma.vercel.app/alltoys?subcategory=${value}`)
   //     .then(res => res.json())
   //     .then(data => setsubcategoryValue(data))
   // }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/alltoys`)
+    fetch(`https://zoo-land-server-sigma.vercel.app/alltoys`)
       .then(res => res.json())
       .then(data => setsubcategoryValue(data))
   }, [])

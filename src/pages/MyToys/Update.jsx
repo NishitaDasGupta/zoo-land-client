@@ -20,7 +20,7 @@ const Update = () => {
         const updatedToy = { picture, price, availableQuantity, rating, detailDescription }
         // console.log(updatedToy);
 
-        fetch(`http://localhost:5000/allToy/${_id}`, {
+        fetch(`https://zoo-land-server-sigma.vercel.app/allToy/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
