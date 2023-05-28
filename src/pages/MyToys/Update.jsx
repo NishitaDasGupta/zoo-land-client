@@ -12,9 +12,9 @@ const Update = () => {
         event.preventDefault();
         const form = event.target;
         const picture = form.picture.value;
-        const price = form.price.value;
-        const availableQuantity = form.availableQuantity.value;
-        const rating = form.rating.value;
+        const price = parseFloat(form.price.value);
+        const availableQuantity = parseFloat(form.availableQuantity.value);
+        const rating = parseFloat(form.rating.value);
         const detailDescription = form.detailDescription.value;
 
         const updatedToy = { picture, price, availableQuantity, rating, detailDescription }
@@ -40,7 +40,7 @@ const Update = () => {
 
     }
     return (
-        <div className="mt-7 bg-base-50">
+        <div className="mt-16 bg-base-50">
 
             <div className="text-center mt-4">
                 <h2 className="font-bold text-2xl">Update Your -  {toyName} Toy</h2>
@@ -53,7 +53,7 @@ const Update = () => {
                     </label>
                     <input type="text" name="picture"
                         defaultValue={picture}
-                        placeholder="Photo URL of Toy" className="input input-bordered" />
+                        placeholder="Photo URL of Toy" className="input input-bordered text-slate-500 hover:text-black" />
                 </div>
                 <div className="grid lg:grid-cols-2 gap-4">
 
@@ -62,14 +62,14 @@ const Update = () => {
                             <span className="label-text font-bold">Price</span>
                         </label>
                         <input type="text" name="price"
-                            defaultValue={price} placeholder="Price" className="input input-bordered" />
+                            defaultValue={price} placeholder="Price" className="input input-bordered text-slate-500 hover:text-black" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-bold">Description</span>
                         </label>
                         <input type="text" name="detailDescription"
-                            defaultValue={detailDescription} placeholder="Description of Toy" className="input input-bordered" />
+                            defaultValue={detailDescription} placeholder="Description of Toy" className="input input-bordered text-slate-500 hover:text-black" />
                     </div>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-4">
@@ -78,14 +78,14 @@ const Update = () => {
                             <span className="label-text font-bold">Quantity</span>
                         </label>
                         <input type="text" name="availableQuantity"
-                            defaultValue={availableQuantity} placeholder="Availabel quantity" className="input input-bordered" />
+                            defaultValue={availableQuantity} placeholder="Availabel quantity" className="input input-bordered text-slate-500 hover:text-black" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-bold">Rating</span>
                         </label>
                         <input type="text" name="rating"
-                            defaultValue={rating} placeholder="Rating" className="input input-bordered" />
+                            defaultValue={rating} placeholder="Rating" className="input input-bordered text-slate-500 hover:text-black" />
                     </div>
                 </div>
                 <div className="text-center">

@@ -13,8 +13,8 @@ const AllToys = () => {
   }, [])
 
   return (
-    <div>
-      <h2 className="text-center text-3xl font-bold text-orange-600 my-3">Toy Items</h2>
+    <div className="mt-16 pt-4">
+      <h2 className="text-center text-3xl font-bold text-orange-900 my-3">Toy Items</h2>
 
       <div className="text-right" >
         <input

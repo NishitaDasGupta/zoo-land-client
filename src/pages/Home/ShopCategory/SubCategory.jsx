@@ -2,10 +2,12 @@ import { Rating } from "@smastrom/react-rating";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const SubCategory = ({ value }) => {
+    const {user} = useContext(AuthContext);
     const navigate =  useNavigate();
     useEffect(() => {
         AOS.init();
@@ -13,6 +15,8 @@ const SubCategory = ({ value }) => {
       }, [])
     const { _id, price, toyName, picture, rating } = value;
     const handleDetails = _id => {
+       if(!user)
+       {
         Swal.fire({
             title: 'You have to log in first to view details!',
             icon: 'warning',
@@ -25,6 +29,10 @@ const SubCategory = ({ value }) => {
               navigate(`/alltoy/${_id}`);
             }
           })
+       }
+       else{
+        navigate(`/alltoy/${_id}`);
+       }
     }
     return (
         <div data-aos="fade-up"

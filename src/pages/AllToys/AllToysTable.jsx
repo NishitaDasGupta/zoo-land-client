@@ -13,7 +13,7 @@ const AllToysTable = ({toy,index}) => {
             <td className="text-center">{availableQuantity}</td>
             <td>
                 <Link to={`/alltoy/${_id}`}>
-                <button  className="btn bg-orange-400 hover:bg-orange-600">Details</button>
+                <button  className="btn  bg-slate-600 hover:bg-slate-800 border-orange-800 border-b-4  border-t-0 border-x-0">Details</button>
                 </Link>
             </td>
         </tr>

@@ -13,11 +13,11 @@ const AddToy = () => {
         const seller = form.seller.value;
         const picture = form.picture.value;
         const toyName = form.toyName.value;
-        const price = form.price.value;
+        const price = parseFloat(form.price.value);
         const animal = form.animal.value;
         const subcategory = form.subcategory.value;
-        const availableQuantity = form.availableQuantity.value;
-        const rating = form.rating.value;
+        const availableQuantity = parseFloat(form.availableQuantity.value);
+        const rating = parseFloat(form.rating.value);
         const detailDescription = form.detailDescription.value;
 
         const toy = {
@@ -43,11 +43,13 @@ const AddToy = () => {
             })
     }
     return (
-        <div className="mt-7 bg-base-50">
+        <div className="mt-16 pt-4 bg-base-50">
             <h2 className="text-4xl text-center font-bold">Add a Toy</h2>
             <form onSubmit={handleAddToy} className="p-10">
+                
                 <div className="grid lg:grid-cols-2 gap-4">
                     <div className="form-control">
+                   
                         <label className="label">
                             <span className="label-text font-bold">Seller Email</span>
                         </label>
@@ -71,7 +73,7 @@ const AddToy = () => {
                     </label>
                     <input type="text" name="picture" placeholder="Photo URL of Toy" className="input input-bordered" />
                 </div>
-                <div className="grid lg:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-3 gap-4">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-bold">Toy name</span>
@@ -80,27 +82,28 @@ const AddToy = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-bold">Price</span>
-                        </label>
-                        <input type="text" name="price" placeholder="Price" className="input input-bordered" />
-                    </div>
-                </div>
-                <div className="grid lg:grid-cols-2 gap-4">
-
-                    <div className="form-control">
-                        <label className="label">
                             <span className="label-text font-bold">Animal Type</span>
                         </label>
                         <input type="text" name="animal" placeholder="Animal Type of toy" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-bold">Sub-Category</span>
+                            <span className="label-text font-bold">Category</span>
                         </label>
-                        <input type="text" name="subcategory" placeholder="Sub-Category of toy" className="input input-bordered" />
+                        <input type="text" name="subcategory" placeholder="Category of toy" className="input input-bordered" />
                     </div>
                 </div>
-                <div className="grid lg:grid-cols-2 gap-4">
+           
+
+                
+        
+                <div className="grid lg:grid-cols-3 gap-4">
+                <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold">Price</span>
+                        </label>
+                        <input type="text" name="price" placeholder="Price" className="input input-bordered" />
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-bold">Quantity</span>

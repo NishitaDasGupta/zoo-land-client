@@ -10,7 +10,7 @@ const SingleToy = () => {
     const { seller, animal, availableQuantity, price, sellerEmail, subcategory, toyName, picture, detailDescription, rating
     } = toy;
     return (
-        <div className="mt-14 p-5">
+        <div className="mt-16 p-5">
            
             <div className="flex items-center mb-3">
               <Link to="/" title="Back" className="text-xl mr-3" >

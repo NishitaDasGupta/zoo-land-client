@@ -50,7 +50,7 @@ const MyToys = () => {
 
     const handlePrice = value => {
         console.log(value);
-        fetch(`https://zoo-land-server-sigma.vercel.app/alltoys?sellerEmail=${user.email}&sort=${value}`)
+        fetch(`https://zoo-land-server-sigma.vercel.app/allToys?sellerEmail=${user.email}&sort=${value}`)
             .then(res => res.json())
             .then(data => setMyToy(data))
     }
@@ -58,7 +58,7 @@ const MyToys = () => {
 
 
     return (
-        <div>
+        <div className="mt-16">
             {
                 myToy.length === 0 ?
 

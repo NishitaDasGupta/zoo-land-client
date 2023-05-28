@@ -3,6 +3,7 @@ import logo from "../../../src/assets/ZooLand.png"
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ActiveRoutes from "../../Routes/ActiveRoutes/ActiveRoutes";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
@@ -19,8 +20,8 @@ const Navbar = () => {
 
 
   return (
-    <div>
-      <div className="navbar bg-base-200">
+
+      <div className="navbar max-w-7xl mx-auto fixed z-30 bg-opacity-30 bg-black">
 
         <div className="navbar-start">
           <div className="dropdown">
@@ -29,32 +30,32 @@ const Navbar = () => {
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
 
-              <li className="text-orange-600 font-bold"><ActiveRoutes to='/'>Home</ActiveRoutes></li>
-              <li className="text-orange-600 font-bold"><ActiveRoutes to='/allToys'>All Toys</ActiveRoutes></li>
-              <li className="text-orange-600 font-bold"><ActiveRoutes to='/blogs'>Blogs</ActiveRoutes></li>
+              <li className="font-bold"><ActiveRoutes to='/'>Home</ActiveRoutes></li>
+              <li className="font-bold"><ActiveRoutes to='/allToys'>All Toys</ActiveRoutes></li>
+              <li className="font-bold"><ActiveRoutes to='/blogs'>Blogs</ActiveRoutes></li>
               {
                 user ?
                   <div>
-                    <li className="text-orange-600 font-bold"><ActiveRoutes to='/myToys'>My Toys</ActiveRoutes></li>
-                    <li className="text-orange-600 font-bold"><ActiveRoutes to='/addToy'>Add a Toy</ActiveRoutes></li>
+                    <li className="font-bold"><ActiveRoutes to='/myToys'>My Toys</ActiveRoutes></li>
+                    <li className="font-bold"><ActiveRoutes to='/addToy'>Add a Toy</ActiveRoutes></li>
                     <>
                       {
                         user.photoURL && <img className="w-8 h-8 rounded-full border-2 border-white" src={user.photoURL} title={user.displayName} />
                       }
                     </>
-                    <li className="text-orange-600 font-bold"><button onClick={handleLogOut}>LogOut</button></li>
+                    <li className="font-bold"><button onClick={handleLogOut}>LogOut</button></li>
                   </div>
                   :
-                  <li className="text-orange-600 font-bold"><ActiveRoutes to='/login'>Login</ActiveRoutes></li>
+                  <li className="font-bold"><ActiveRoutes to='/login'>Login</ActiveRoutes></li>
               }
 
             </ul>
           </div>
           <div className="flex items-center justify-center ">
-            <div className="w-16 pr-4">
-              <img src={logo} alt="" />
-            </div>
-            <h2 className="text-4xl font-bold">Zoo <span className="text-orange-600">Land</span></h2>
+           <Link to="/"> <div className="w-16 pr-4">
+              <img src={logo}  />
+            </div></Link>
+            <h2 className="text-4xl text-white font-bold">zoo<span className="text-orange-700">Land</span></h2>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">
@@ -62,24 +63,24 @@ const Navbar = () => {
 
 
 
-            <li className="text-orange-600 font-bold"><ActiveRoutes to='/'>Home</ActiveRoutes></li>
-            <li className="text-orange-600 font-bold"><ActiveRoutes to='/allToys'>All Toys</ActiveRoutes></li>
-            <li className="text-orange-600 font-bold"><ActiveRoutes to='/blogs'>Blogs</ActiveRoutes></li>
+            <li className=" font-bold text-white"><ActiveRoutes to='/'>Home</ActiveRoutes></li>
+            <li className=" font-bold text-white"><ActiveRoutes to='/allToys'>All Toys</ActiveRoutes></li>
+            <li className=" font-bold text-white"><ActiveRoutes to='/blogs'>Blogs</ActiveRoutes></li>
             <div>
               {
                 user ?
                   <div className="flex flex-row items-center justify-center">
-                    <li className="text-orange-600 font-bold"><ActiveRoutes to='/myToys'>My Toys</ActiveRoutes></li>
-                    <li className="text-orange-600 font-bold"><ActiveRoutes to='/addToy'>Add a Toy</ActiveRoutes></li>
+                    <li className=" font-bold text-white"><ActiveRoutes to='/myToys'>My Toys</ActiveRoutes></li>
+                    <li className=" font-bold text-white"><ActiveRoutes to='/addToy'>Add a Toy</ActiveRoutes></li>
                     <div>
                       {
                         user.photoURL && <img className="w-8 h-8 rounded-full border-2 border-white" src={user.photoURL} title={user.displayName} />
                       }
                     </div>
-                    <li className="text-orange-600 font-bold"><button onClick={handleLogOut}>LogOut</button></li>
+                    <li className=" font-bold text-white"><button onClick={handleLogOut}>LogOut</button></li>
                   </div>
                   :
-                  <li className="text-orange-600 font-bold"><ActiveRoutes to='/login'>Login</ActiveRoutes></li>
+                  <li className=" font-bold text-white"><ActiveRoutes to='/login'>Login</ActiveRoutes></li>
               }
             </div>
 
@@ -88,9 +89,6 @@ const Navbar = () => {
 
 
       </div>
-
-
-    </div>
 
   );
 };
