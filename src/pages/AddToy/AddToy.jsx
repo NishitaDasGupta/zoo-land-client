@@ -124,7 +124,7 @@ const AddToy = () => {
                     <input type="text" name="detailDescription" placeholder="Description of Toy" className="input input-bordered" />
                 </div>
                 <div className="text-center">
-                    <button className="btn my-7 w-1/2 lg:w-1/3 bg-orange-400 hover:bg-orange-600">Add a Toy</button>
+                    <button className="btn my-7 w-1/2 lg:w-1/3  bg-[#e51f6e] hover:bg-[#a0164d]">Add a Toy</button>
                 </div>
             </form>
         </div>

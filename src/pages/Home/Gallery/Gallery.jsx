@@ -29,11 +29,12 @@ const Gallery = () => {
         }
     }
     return (
-        <div className="mx-auto py-10 mt-16 bg-gray-400/20 text-center border-r-8 border-gray-500/90">
-            <h2 className="text-4xl font-bold text-center mb-3 text-slate-800">Imagination Station: Kids Gallery Bliss</h2>
-            <p className="max-w-xl p-4 mx-auto mb-5 ">Enter a realm of excitement in our Kids Gallery. With vibrant exhibits and captivating activities, children indulge in boundless entertainment, fostering imagination, creativity, and endless fun.</p>
+        <div className="mx-auto py-16 my-40 bg-[#fad2e2] text-center border-r-8 border-[#e51f6e]">
 
-          
+            <h2 className="text-4xl font-bold text-center mb-5 text-[#e51f6e]">Imagination Station: Kids Gallery Bliss</h2>
+            <p className="max-w-xl  mx-auto mb-20 text-justify px-2">Enter a realm of excitement in our Kids Gallery. With vibrant exhibits and captivating activities, children indulge in boundless entertainment, fostering imagination, creativity, and endless fun.
+            </p>
+
             <Carousel responsive={responsive} className="max-w-5xl mx-auto">
                 {
                     gallery.map(pic => <GalleryImg
@@ -44,7 +45,7 @@ const Gallery = () => {
             </Carousel>
 
 
-           
+
         </div>
 
 

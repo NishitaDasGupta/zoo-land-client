@@ -19,13 +19,13 @@ const MyToysTable = ({ toy, index, handleDelete }) => {
                 <div className="flex items-center justify-center">
                     <Link to={`/update/${_id}`}>
                     <p title="Edit">
-                        <button className="btn btn-outline border-0 hover:bg-orange-400"><FaEdit /></button>
+                        <button className="btn btn-outline border-0  hover:bg-[#e51f6e] "><FaEdit /></button>
                     </p>
                     </Link>
                     <p title="Delete">
-                        <button onClick={() => { handleDelete(_id) }} className="btn btn-outline border-0 hover:bg-orange-400"><RiDeleteBin6Line /></button></p>
+                        <button onClick={() => { handleDelete(_id) }} className="btn btn-outline border-0  hover:bg-[#e51f6e] "><RiDeleteBin6Line /></button></p>
                     <Link to={`/alltoy/${_id}`}>
-                        <p title="View Details"> <button className="btn btn-outline border-0 hover:bg-orange-400"><BiDetail /></button></p>
+                        <p title="View Details"> <button className="btn btn-outline border-0  hover:bg-[#e51f6e] "><BiDetail /></button></p>
 
                     </Link>
 

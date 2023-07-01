@@ -54,9 +54,8 @@ const Login = () => {
       <h2 className="text-4xl font-bold text-center py-5">Please Login!</h2>
       <div className="hero min-h-screen ">
         <div className="hero-content w-full lg:flex-row-reverse flex-col">
-          <div  data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine" className="w-1/2">
+          <div 
+       className="w-1/2">
             <img src={login} alt="" />
           </div>
           <div className="w-1/2 lg:w-1/4">
@@ -83,15 +82,15 @@ const Login = () => {
                     error && <p className="text-red-600">{error}</p>
                   }
                   <div className="form-control mt-6">
-                    <button className="btn bg-orange-400 hover:bg-orange-600">Login</button>
+                    <button className="btn bg-[#e51f6e] hover:bg-[#a0164d]">Login</button>
                   </div>
                   <div className="divider">Or Sign in With</div>
                   <div className="form-control mt-6">
-                    <button onClick={handleGoogle} className="btn bg-orange-400 hover:bg-orange-600"><span className="text-2xl pr-3"><FaGoogle /></span> Google</button>
+                    <button onClick={handleGoogle} className="btn  bg-[#e51f6e] hover:bg-[#a0164d]"><span className="text-2xl pr-3"><FaGoogle /></span> Google</button>
                   </div>
                 </div>
                 <div className="text-center">
-                  <small >Dont have an account? <Link to='/signup' className="text-orange-600">Please Register</Link> </small>
+                  <small >Dont have an account? <Link to='/signup' className="text-[#e51f6e]">Please Register</Link> </small>
                 </div>
 
               </form>

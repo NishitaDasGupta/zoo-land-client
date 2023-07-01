@@ -70,11 +70,11 @@ console.log(name ,
                                         error && <p className="text-red-600">{error}</p>
                                     }
                                     <div className="form-control mt-6">
-                                        <button className="btn bg-orange-400 hover:bg-orange-600">Register</button>
+                                        <button className="btn bg-[#e51f6e] hover:bg-[#a0164d]">Register</button>
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <small >Already have an account? <Link to='/login' className="text-orange-600">Please Login</Link> </small>
+                                    <small >Already have an account? <Link to='/login' className="text-[#e51f6e]">Please Login</Link> </small>
                                 </div>
 
                             </form>

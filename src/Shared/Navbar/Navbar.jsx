@@ -28,7 +28,7 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
-            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-1 shadow bg-base-100 rounded-box w-52">
 
               <li className="font-bold"><ActiveRoutes to='/'>Home</ActiveRoutes></li>
               <li className="font-bold"><ActiveRoutes to='/allToys'>All Toys</ActiveRoutes></li>
@@ -55,7 +55,7 @@ const Navbar = () => {
            <Link to="/"> <div className="w-16 pr-4">
               <img src={logo}  />
             </div></Link>
-            <h2 className="text-4xl text-white font-bold">zoo<span className="text-orange-700">Land</span></h2>
+            <h2 className="text-4xl text-white font-bold">zoo<span className="text-[#e51f6e]">Land</span></h2>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">

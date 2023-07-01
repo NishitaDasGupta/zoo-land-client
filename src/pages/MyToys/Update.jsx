@@ -44,7 +44,7 @@ const Update = () => {
 
             <div className="text-center mt-4">
                 <h2 className="font-bold text-2xl">Update Your -  {toyName} Toy</h2>
-                <p >Type: <span className="text-orange-600">{animal}</span> | <span className="text-orange-600">{subcategory}</span>  </p>
+                <p >Type: <span className="text-[#e51f6e]">{animal}</span> | <span className="text-[#e51f6e]">{subcategory}</span>  </p>
             </div>
             <form onSubmit={handleUpdate} className="p-10 mx-auto lg:w-1/2">
                 <div className="form-control">
@@ -89,7 +89,7 @@ const Update = () => {
                     </div>
                 </div>
                 <div className="text-center">
-                    <button className="btn my-7 w-1/2 lg:w-1/3 bg-orange-400 hover:bg-orange-600">Update</button>
+                    <button className="btn my-7 w-1/2 lg:w-1/3 bg-[#e51f6e] hover:bg-[#a0164d] ">Update</button>
                 </div>
             </form>
         </div>

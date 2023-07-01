@@ -36,7 +36,7 @@ const SubCategory = ({ value }) => {
     }
     return (
         <div data-aos="fade-up"
-        data-aos-duration="2000" className="card w-72 rounded-t-3xl bg-base-100 shadow-2xl">
+        data-aos-duration="2000" className="card w-72 rounded-t-full  bg-base-100 shadow-2xl">
             <figure className=" px-10 pt-10 mx-auto">
                 <img src={picture} alt="Toys" className="w-28 h-36 rounded-xl" />
             </figure>
@@ -50,7 +50,9 @@ const SubCategory = ({ value }) => {
                         <Rating style={{ maxWidth: 60 }} value={rating} readOnly />
                     </div>
                 </div>
-                    <button onClick={()=> {handleDetails(_id)}} className="btn w-full bg-orange-400 hover:bg-orange-600">View Details</button>
+                  <div className="mx-auto">
+                  <button onClick={()=> {handleDetails(_id)}} className="btn border-white bg-[#e51f6e] hover:bg-[#a0164d] mb-2">View Details</button>
+                  </div>
             </div>
         </div>
     );

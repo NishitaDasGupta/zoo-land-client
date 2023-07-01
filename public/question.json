@@ -1,0 +1,36 @@
+[
+    {
+    "id": 1,
+    "question": "What types of toys does Zoo Land offer?",
+    "ans": "At Zoo Land, we offer a wide variety of toys, including stuffed animals, plush animals toys, water toys and much more. We strive to provide a diverse range of toys to cater to different interests and age groups."
+    
+  },
+ 
+    {
+    "id": 2,
+    "question": " Can I return or exchange a toy if I'm not satisfied?",
+    "ans": "Absolutely! We want you to be completely satisfied with your purchase. If for any reason you're not happy with a toy, you can return it within our specified return policy timeframe for a refund or exchange. Please refer to our Returns and Exchanges policy for more details."
+    
+  },
+ 
+    {
+    "id": 3,
+    "question": "Does Zoo Land offer gift wrapping services",
+    "ans": " Yes, we do! We understand the importance of presenting gifts beautifully. That's why we offer gift wrapping services for your convenience. Simply select the gift wrapping option during checkout, and our team will ensure your chosen toys are elegantly wrapped and ready to be gifted."
+    
+  },
+ 
+    {
+    "id": 4,
+    "question": "How can I track my order?",
+    "ans": "Once your order is confirmed and shipped, we will provide you with a tracking number. You can use this tracking number to monitor the progress of your shipment. Simply visit our website and enter the tracking number in the designated tracking section to get real-time updates on the status of your order."
+    
+  },
+    {
+    "id": 5,
+    "question": "Are the toys at Zoo Land safe for children?",
+    "ans": "Yes, the safety of our customers, especially children, is our top priority. We carefully select toys from trusted and reputable brands that meet stringent safety standards. All our toys undergo thorough testing and adhere to safety regulations to ensure they are safe and suitable for children of the recommended age range."
+    
+  }
+ 
+]

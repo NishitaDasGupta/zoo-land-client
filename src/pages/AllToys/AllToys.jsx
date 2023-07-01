@@ -14,14 +14,14 @@ const AllToys = () => {
 
   return (
     <div className="mt-16 pt-4">
-      <h2 className="text-center text-3xl font-bold text-orange-900 my-3">Toy Items</h2>
+      <h2 className="text-center text-3xl font-bold text-[#e51f6e] my-3">Toy Items</h2>
 
       <div className="text-right" >
         <input
           onChange={(event) => setQuery(event.target.value)}
           type="text"
           placeholder="Search by Toy Name"
-          className="input input-bordered bg-orange-50"
+          className="input input-bordered bg-[#f7bcd4]"
         />
 
       </div>

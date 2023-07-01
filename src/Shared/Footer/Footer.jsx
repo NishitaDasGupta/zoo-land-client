@@ -44,7 +44,7 @@ const Footer = () => {
                 <div className="items-center grid-flow-col">
                     <img className="w-16" src={logo} alt="" />
                     <div>
-                        <p className="text-2xl font-bold ">Zoo <span className="text-orange-600">Land</span> </p>
+                        <p className="text-2xl font-bold ">Zoo <span className="text-[#e51f6e]">Land</span> </p>
                         <p>© 2023 Das Interactive, All Rights Reserved</p>
                     </div>
                 </div>

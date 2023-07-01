@@ -66,10 +66,10 @@ const MyToys = () => {
                     :
                     <div>
 
-                        <h2 className="text-center text-3xl font-bold text-orange-600 my-3">Your Toy Items</h2>
+                        <h2 className="text-center text-3xl font-bold text-[#e51f6e] my-3">Your Toy Items</h2>
                         <div>
                             <div className="dropdown dropdown-hover">
-                                <label tabIndex={0} className="bg-orange-400 hover:bg-orange-600 btn m-1">Price  <div className="text-2xl font-bold">
+                                <label tabIndex={0} className=" bg-[#e51f6e] hover:bg-[#a0164d] btn m-1">Price  <div className="text-2xl font-bold">
                                 <RiArrowDropDownLine/></div></label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li className="hover:bg-orange-100"><button onClick={() => { handlePrice(1) }}>Ascending Price</button></li>

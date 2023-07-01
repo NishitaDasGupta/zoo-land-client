@@ -11,7 +11,7 @@ const GalleryImg = ({pic}) => {
     return (
         <div data-aos="flip-left"
         data-aos-duration="3000">
-            <img className="p-2  rounded-lg mx-auto" src={picture} />
+            <img className="p-2 w-36 h-36 rounded-full mx-auto shadow-xl" src={picture} />
         </div>
     );
 };
