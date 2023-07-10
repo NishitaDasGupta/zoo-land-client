@@ -4,12 +4,12 @@ const Subscribe = () => {
     return (
         <div className="mx-auto my-40">
             <div className="lg:flex items-center justify-center">
-                <img src={subscribe} alt="" />
+                <img src={subscribe} alt="" className="mx-auto lg:mx-0"/>
                 <div className="text-center">
     <h1 className="text-5xl font-bold">Subscribe for Offer!</h1>
     <p className="text-xl font-bold py-6">NEWSLETTER SIGNUP</p>
   
-    <div className="relative">
+    <div className="relative mx-3">
       <input
         type="email"
         className="border-b border-gray-300 focus:outline-none focus:border-blue-500 py-2 pr-8 pl-4 block w-full appearance-none"

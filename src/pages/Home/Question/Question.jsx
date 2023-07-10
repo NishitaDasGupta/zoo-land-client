@@ -17,7 +17,7 @@ const Question = () => {
             </p> */}
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
                 <img className="w-1/2 mx-auto" src={faq} alt="" />
-                <div className="my-8 w-3/4 ">
+                <div className="my-8 w-3/4 mx-auto">
 
                     {
                         questions.map(ques => <ReviewCard

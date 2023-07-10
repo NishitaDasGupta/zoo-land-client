@@ -19,7 +19,7 @@ const Articles = () => {
           <h2 className="text-4xl font-bold text-center mb-5 text-[#e51f6e]">Our Articles</h2>
       <p className="max-w-2xl  mx-auto mb-9 text-justify px-2"> Explore our collection of articles showcasing thrilling wildlife adventures, dedicated conservation efforts, and intriguing facts about fascinating animals from around the world.
      </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-10">
             {
                 articles.map(article => <div
                     key={article._id} className="border-2 shadow-xl shadow-[#fad2e2] rounded-xl hover:bg-[#ed629a] hover:text-white">

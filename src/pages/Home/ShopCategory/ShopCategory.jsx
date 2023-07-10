@@ -5,12 +5,7 @@ import SubCategory from './SubCategory';
 
 const ShopCategory = () => {
   const [subcategoryValue, setsubcategoryValue] = useState([]);
-  // const handleTab = (value) => {
-  //   console.log(value);
-  //   fetch(`https://zoo-land-server-sigma.vercel.app/alltoys?subcategory=${value}`)
-  //     .then(res => res.json())
-  //     .then(data => setsubcategoryValue(data))
-  // }
+
 
   useEffect(() => {
     fetch(`https://zoo-land-server-sigma.vercel.app/alltoys`)
@@ -33,7 +28,7 @@ const ShopCategory = () => {
               </TabList>
 
               <TabPanel>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-3 mx-1'>
                   {
                     (subcategoryValue.filter(toy => toy.subcategory === "Plush Toys")).map(value => <SubCategory key={value._id}
                       value={value}></SubCategory>)

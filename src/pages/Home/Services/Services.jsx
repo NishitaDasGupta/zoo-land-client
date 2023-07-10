@@ -14,7 +14,7 @@ const Services = () => {
             <h2 className="text-4xl font-bold text-center  text-[#e51f6e] mb-14">Our Top Services</h2>
             {/* <p className="max-w-xl border-l-8 border-r-8 border-orange-500 mx-auto mb-14 text-justify px-2"> Explore our services of - 100% Satisfaction Guarantee, Discounts and Promotions, Gift Cards, Gift Wrapping Services, Online Ordering and Delivery.
             </p> */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto">
                 {
                     services.map(service => <div
                         key={service.id}>
